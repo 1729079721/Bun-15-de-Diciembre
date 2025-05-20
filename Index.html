@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Áreas Técnicas - Unidad Educativa</title>
+  <style>
+    :root {
+      --main-bg: #fefefe;
+      --header-bg: #004d4d;
+      --header-text: #ffffff;
+      --nav-bg: #ffffff;
+      --nav-text: #004d4d;
+      --footer-bg: #002626;
+      --accent: #00b3b3;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--main-bg);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--header-bg);
+      color: var(--header-text);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header img {
+      width: 70px;
+      vertical-align: middle;
+    }
+
+    header h1 {
+      display: inline-block;
+      margin-left: 15px;
+      font-size: 28px;
+    }
+
+    header h3 {
+      font-weight: normal;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .container {
+      display: flex;
+      min-height: calc(100vh - 160px);
+    }
+
+    nav {
+      background-color: var(--nav-bg);
+      width: 220px;
+      padding: 25px 20px;
+      border-right: 1px solid #ddd;
+      position: sticky;
+      top: 0;
+      height: fit-content;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav a {
+      display: block;
+      color: var(--nav-text);
+      text-decoration: none;
+      padding: 12px 10px;
+      border-radius: 6px;
+      margin-bottom: 10px;
+      background-color: #f5f5f5;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    nav a:hover {
+      background-color: var(--accent);
+      color: white;
+      transform: translateX(5px);
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px 30px;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h2 {
+      color: var(--nav-text);
+      border-bottom: 2px solid var(--accent);
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    .materia {
+      margin: 30px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+
+    .materia img {
+      width: 180px;
+      height: 110px;
+      object-fit: cover;
+      margin-right: 25px;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .materia img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .materia p {
+      flex: 1;
+      line-height: 1.8;
+      text-align: justify;
+      color: #444;
+    }
+
+    footer {
+      background-color: var(--footer-bg);
+      color: white;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      nav {
+        width: 100%;
+        position: static;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        display: flex;
+        justify-content: space-around;
+      }
+      nav a {
+        margin-bottom: 0;
+        flex-grow: 1;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="bun/logo.jpg" alt="Logo del colegio">
+  <h1>Unidad Educativa 15 de Diciembre</h1>
+  <h3><p>“Conectando conocimiento con tecnología”</p></h3>
+</header>
+
+<div class="container">
+ <nav>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    <li>
+      <a href="#informatica">💻 Informática</a>
+    </li>
+    <li>
+      <a href="#contabilidad">📊 Contabilidad</a>
+    </li>
+  </ul>
+</nav>
+
+
+  <main>
+    <section id="informatica">
+      <h2>Área de Informática</h2>
+      
+      <div class="materia">
+        <img src="bun/programacion.jpg" alt="Programación">
+        <p><strong>Programación:</strong> Se enfoca en el desarrollo de habilidades para crear aplicaciones y soluciones informáticas mediante la escritura de código. Los estudiantes aprenden lenguajes como HTML, C++ y JavaScript, así como estructuras de control, algoritmos y lógica computacional. Esta materia fomenta la creatividad, la resolución de problemas y la construcción de software útil para distintos entornos.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/soporte.jpg" alt="Soporte Técnico">
+        <p><strong>Soporte Técnico:</strong> Capacita a los estudiantes en el mantenimiento preventivo y correctivo de equipos informáticos. Incluye el diagnóstico de fallas, instalación de periféricos, configuración de redes y manejo de herramientas para garantizar el correcto funcionamiento de computadoras y sistemas. Esta formación es clave para garantizar entornos tecnológicos seguros y eficientes.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/fol.jpg" alt="F.O.L">
+        <p><strong>F.O.L:</strong> Brinda conocimientos sobre derechos laborales, seguridad en el trabajo, prevención de riesgos y orientación para el empleo. Esta materia prepara a los estudiantes para su ingreso al mundo laboral, enseñando cómo elaborar un currículum, enfrentar entrevistas y conocer sus deberes y derechos como trabajadores.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/diseño.png" alt="Desarrollo Web">
+        <p><strong>Diseño y Desarrollo Web:</strong> Introducción al diseño de sitios web modernos utilizando tecnologías como HTML, CSS y JavaScript. Los estudiantes aprenden a estructurar páginas, aplicar estilos y agregar interactividad, preparándose para el mundo digital y creativo del desarrollo web. También se introducen principios de diseño responsive y accesibilidad.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/sistemas.jpg" alt="Sistemas Operativos">
+        <p><strong>Sistemas Operativos:</strong> Explora el funcionamiento y la administración de sistemas como Windows, Linux y otros. Los alumnos adquieren habilidades para instalar, configurar, mantener y solucionar problemas en sistemas operativos, así como gestionar usuarios, permisos y recursos del sistema.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/ofimatica.jpg" alt="Aplicaciones Ofimáticas">
+        <p><strong>Aplicaciones Ofimáticas:</strong> Forma a los estudiantes en el uso profesional de herramientas de oficina como Word, Excel, PowerPoint y otros programas del paquete Office. Esta materia es esencial para tareas administrativas, elaboración de documentos, presentaciones y análisis de datos mediante hojas de cálculo.</p>
+      </div>
+    </section>
+
+    <section id="contabilidad">
+      <h2>Área de Contabilidad</h2>
+
+      <div class="materia">
+        <img src="bun/general.jpg" alt="Contabilidad General">
+        <p><strong>Contabilidad General:</strong> Base de todo el proceso contable. Enseña a registrar operaciones financieras, elaborar estados contables y aplicar principios contables. Esta asignatura desarrolla la capacidad de análisis numérico y la organización de la información financiera de una empresa.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/costos.jpg" alt="Contabilidad de Costos">
+        <p><strong>Contabilidad de Costos:</strong> Permite calcular el costo de productos o servicios, analizar la rentabilidad y optimizar recursos. Los estudiantes aprenden técnicas para registrar y controlar los costos, fundamentales para la toma de decisiones en empresas de producción y servicios.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/legislacion.webp" alt="Legislación Laboral">
+        <p><strong>Legislación Laboral y Tributaria:</strong> Estudia las normas que rigen las relaciones laborales y fiscales. Se analizan leyes laborales, tipos de contratos, derechos del trabajador, impuestos, obligaciones tributarias y su correcta aplicación en el entorno empresarial.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/matematicas.png" alt="Matemática Financiera">
+        <p><strong>Matemática Financiera:</strong> Aplica herramientas matemáticas al análisis financiero. Incluye temas como el interés simple y compuesto, anualidades, amortizaciones y evaluaciones de inversiones. Fundamental para la toma de decisiones económicas y contables.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/emprendimiento.jpg" alt="Emprendimiento">
+        <p><strong>Taller de Emprendimiento:</strong> Fomenta la creatividad, la iniciativa y el pensamiento empresarial. Se guía a los estudiantes en la elaboración de planes de negocio, estudio de mercado y proyección financiera, promoviendo el espíritu emprendedor y la innovación.</p>
+      </div>
+
+      <div class="materia">
+        <img src="bun/software.jpg" alt="Aplicaciones Contables">
+        <p><strong>Aplicaciones Contables:</strong> Desarrolla habilidades en el manejo de software contable y herramientas digitales como Excel avanzado. Los estudiantes simulan procesos contables reales, automatizan cálculos y elaboran reportes financieros de manera eficiente y profesional.</p>
+      </div>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <p>&copy; 2025 Unidad Educativa 15 de Diciembre.</p>
+  <p>Dirección: Panamericana Sur, calle Oswaldo Guayasamín 90 PB OE2C, Unión y Progreso (Barrio Alfredo Lozada) Tele-Fax: 3006378</p>
+  <p>Teléfono: 98 830 6070 | Email: bunce2007@gmail.com</p>
+</footer>
+
+</body>
+</html>
+
+
